@@ -2,8 +2,8 @@ import { ADD_TODO, TOGGLE_DONE } from '../actions';
 
 const initialState = {
     todos: [
-      { todo: 'Clean garage', id: 34782356, completed: false },
-      { todo: 'Cook', id: 677802, completed: false }
+      { todo: 'Clean garage', id: 8675309, completed: false },
+      { todo: 'Cook', id: 5555551212, completed: false }
     ]
 };
 
@@ -23,11 +23,6 @@ function reducer(state = initialState, action) {
         };
   
       case TOGGLE_DONE:
-        // map through state.members
-        // if member's id at current iteration matches action.payload
-        // return new member object - spread in old member object
-        // toggle member's dragonStatus (immutable)
-        // else return member untouched
         return {
           ...state,
           todos: state.todos.map(todo => {
